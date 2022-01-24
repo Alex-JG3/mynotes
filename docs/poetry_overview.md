@@ -40,3 +40,13 @@ $ poetry env remove <environmentname>
 ```
 
 Note that the poetry virtual environment name is usually not the name of the project or project directory. To find the name of the virtual environment use the `poetry env info --path` function. This will give you the path to the virtual environment. The final directory in the path is the virtual environment name.
+
+## Working with Multiple Python Versions (Windows)
+
+One major difference between poetry and conda is that conda allows you to choose and install a specific version of python when you create a new conda environment. When you install poetry, it is (usually) assosciated with the default version of Python on your machine. So, when you create a new poetry virtual environment it will be assosciated with your default version of python unless specified otherwise.
+
+If you want to change which version of Python is used for your virtual environment, use the following function.
+
+```
+$ poetry env use path\to\python\python.exe
+```
