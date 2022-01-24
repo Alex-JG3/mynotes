@@ -45,12 +45,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,6 +101,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -253,6 +279,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#working-with-multiple-python-versions-windows" class="md-nav__link">
+    Working with Multiple Python Versions (Windows)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -315,6 +348,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#working-with-multiple-python-versions-windows" class="md-nav__link">
+    Working with Multiple Python Versions (Windows)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -350,6 +390,11 @@ poetry init
 <pre><code>$ poetry env remove &lt;environmentname&gt;
 </code></pre>
 <p>Note that the poetry virtual environment name is usually not the name of the project or project directory. To find the name of the virtual environment use the <code>poetry env info --path</code> function. This will give you the path to the virtual environment. The final directory in the path is the virtual environment name.</p>
+<h2 id="working-with-multiple-python-versions-windows">Working with Multiple Python Versions (Windows)</h2>
+<p>One major difference between poetry and conda is that conda allows you to choose and install a specific version of python when you create a new conda environment. When you install poetry, it is (usually) assosciated with the default version of Python on your machine. So, when you create a new poetry virtual environment it will be assosciated with your default version of python unless specified otherwise.</p>
+<p>If you want to change which version of Python is used for your virtual environment, use the following function.</p>
+<pre><code>$ poetry env use path\to\python\python.exe
+</code></pre>
 
               
             </article>
