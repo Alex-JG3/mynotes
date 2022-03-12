@@ -7,9 +7,9 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
-      primary: pink
+      primary: teal
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: pink
+      primary: teal
