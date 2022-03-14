@@ -21,6 +21,8 @@ Docker containers can be created using the `docker create` command.
 | `sudo service --status-all` | List the status of all programs running on Ubuntu. |
 | `sudo service docker start` | Start Docker. |
 | `sudo docker run hello-world` | Use this to make sure that docker is installed correctly. |
+| `sudo docker image ls` | List all images. |
+| `sudo docker image rm -f <image-id>` | Force remove docker image. |
 
 ## Dockerizing a Python Project
 
